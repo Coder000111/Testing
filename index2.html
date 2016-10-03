@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Dashboard</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="css/style.css?v=1" rel="stylesheet" type="text/css" media="screen" />
+	<link href="css/bootstrap.css" rel="stylesheet">
+	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+     <!-- amCharts javascript sources -->
+    <script type="text/javascript" src="https://www.amcharts.com/lib/3/amcharts.js"></script>
+    <script type="text/javascript" src="https://www.amcharts.com/lib/3/serial.js"></script>     
+</head>
+<body>
+	<div>
+		<nav class="navbar-default naxx navbar-static-side">
+			<div class="sidebar-collapse">
+    			<ul class="nav metismenu" id="side-menu">
+        			<li class="nav-header">
+            			<div class="dropdown profile-element"> <span>
+                            <i class="fa fa-bars hx" style="display:none" ></i>
+                            <img alt="image" class="img-circle image_mini" src="img/girl-03.jpg" ></span>
+                			<a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                            	<span class="clear">
+                            		<span class="block m-t-xs hx"> 
+                            			<strong style="font-weight: 300!important;color:#ffffff;">HOANG NGUYEN</strong>
+                            		</span>
+                            	</span>
+                			</a>
+            			</div>
+        			</li>
+        			<li class="sidebar_li active">
+            			<a href="#" class="navbarclick" ><i class="fa fa-circle-o-notch "></i>
+                			<span class="nav-label"> DASHBOARD</span> 
+                		</a>
+        			</li>
+        			<li class="sidebar_li">
+            			<a href="#"><i class="fa fa-graduation-cap nav_i"></i> <span class="nav-label ">COURSE</span><span class="fa arrow"></span></a>
+              		</li>
+        			<li class="sidebar_li">
+            			<a href="#"><i class="fa fa-clock-o nav_i"></i> <span class="nav-label">EXAM</span><span class="fa arrow"></span></a>
+              		</li>
+              		<li class="sidebar_li">
+            			<a href="#"><i class="fa fa-comments-o nav_i"></i> <span class="nav-label">Q&A</span><span class="fa arrow"></span></a>
+              		</li>
+              		<li class="sidebar_li">
+            			<a href="#"><i class="fa fa-rss nav_i"></i> <span class="nav-label">NEWS</span><span class="fa arrow"></span></a>
+              		</li>
+    			</ul>
+			</div>
+  		</nav>
+  		<div id="pageRight">
+  			<div class="page_top">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="row">
+                        <div class="col-md-2 col-sm-3 col-xs-3 iconsx">
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12 col-xs-12">
+                                    <div class="col-md-4 col-sm-4 col-xs-4">
+                                        <i class="fa  fa-user boz"></i>
+                                    </div>
+                                    <div class="col-md-4 col-sm-4 col-xs-4">
+                                        <i class="fa  fa-comment-o boz"></i>
+                                    </div>
+                                    <div class="col-md-4 col-sm-4 col-xs-4">
+                                        <i class="fa  fa-bell boz"></i>
+                                        <span class="label redx call_not">2</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+  			           <div class="col-md-6 col-sm-4 col-xs-2">
+  					         <h1 class="logo">H</h1>
+  			           </div>
+  				       <div class="col-md-3 col-sm-4 col-xs-6 not_icons">
+  					        <div  id="SearchId">
+  						        <input type="text" class="search_input" placeholder="Search">
+  						        <i class="fa  fa-search"></i>
+                            </div>
+                        </div>  					
+  			       </div>
+                </div>
+            </div>
+  				<div class="info_header">
+  					<div class="col-md-10 col-sm-9 col-xs-10" style="margin-top: 0.4em;">
+                        <div class="row">
+                            <div class="col-md-2 col-sm-3 col-xs-5">
+                                <img alt="image" class="img-circle" src="img/girl-03.jpg" width="90" height="90" style="margin-left: 1.5em;">
+                            </div>
+                            <div class="col-md-10 col-sm-7 col-xs-7" style="margin-top: 0.5em;">
+                                <strong class="font-bold strong">HOANG NGUYEN<i style="margin-left: 1em;" class="fa  fa-star star_orange"></i><i class="fa  fa-star star_orange"></i><i class="fa  fa-star star_orange"></i><i class="fa  fa-star star_boz"></i><i class="fa  fa-star star_boz"></i></strong>
+                                <p class="info_st"><b style="font-weight: 500!important;color: #9ba3af;">Student</b> <i  class="fa fa-circle st_circ"></i><a href="#">Learn more</a></p>
+                                <div style="margin-top: -0.5em;" >
+                                    <img src="img/42.badge.png" style="margin-top: -0.5em;" width="20px"><b style="font-size: 16px;color: #9BA3AF;">8,782 exp</b>
+                                </div>
+                            </div>
+                        </div>
+  					</div>
+  				<div class="col-md-2 col-sm-3 col-xs-2">
+                    <button class="edit_button"></button>
+                    <button class="logout_button"></button>
+  				</div>
+                <div class="row" id="NavId">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="whitex">
+                    <nav class="navbar navbar-default navbarx" id="NavId" >
+                        <ul class=" nav navbar-nav xnav"  >
+                            <li class="active"><a href="#" class="navx">Knowladge</a></li>
+                            <li><a href="#" class="navx">Course</a></li>
+                            <li><a href="#" class="navx">Exam</a></li> 
+                            <li><a href="#" class="navx">Q&A</a></li> 
+                            <li><a href="#" class="navx">News</a></li> 
+                            <li><a href="#" class="navx">Activity</a></li> 
+                            <li><a href="#" class="navx">Friends</a></li> 
+                        </ul>
+                    </nav>                 
+               </div>
+               </div>
+  			   </div>
+            </div>
+                <div class="col-md-12 cards_top">
+                    <div class="row">
+                        <div class="col-md-3 col-sm-3 col-xs-10 other_ways" >
+                            <div class="row">
+                            <div class="row">
+                                <div class="col-md-6 col-sm-6 col-xs-6 whitex border_todo_head ">
+                                    <div class="centerx orangex">
+                                        <h1 class="header_h1">12</h1>
+                                        <h6 class="x">DONE COURSE</h6>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-xs-6 border_bot">
+                                    <div class="centerx blurx">
+                                        <h1 class="header_h1">3</h1>
+                                        <h6 class="x">UNFINISHED COURSE</h6>
+                                    </div>
+                                </div></div>
+                                <div class="row">
+                                <div class="col-md-12 whitex " style="padding-left:0!important;padding-right:0!important;border: 1px solid #dee1e2; border-top: 0!important;">
+                      				<table class="table table-hover">
+    									<tbody>
+    									    <tr>
+    									        <td style="border-top:0!important;" ><p class="more3">Basic for UX Designer</p></td>
+    									    </tr>
+    									    <tr >
+    									        <td ><p class="more3">10 steps to improve your wireframe</p></td>
+    									    </tr>
+    									    <tr >
+    									        <td ><p  class="more3">A Better Way To Request App Ratings</p></td>
+    									    </tr>
+    									    <tr >
+    									        <td ><p  class="more3">How To Speed Up Your WordPress Website</p></td>
+    									    </tr>
+    									    <tr >
+    									        <td colspan="2">
+    									            <div class="more_button">
+    									                <p>Show more <i class="fa fa-angle-double-down"></i></p>
+    									            </div>
+    									        </td>
+    									    </tr>
+    									</tbody>
+  									</table>
+                                </div></div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-3 col-xs-10 other_ways" >
+                            <div class="row">
+                            <div class="row">
+                                <div class="col-md-6 col-sm-6 col-xs-6 whitex border_todo_head">
+                                    <div class="centerx mor">
+                                        <h1 class="header_h1">27</h1>
+                                        <h6 class="x">ASKING QUESTIONS</h6>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-xs-6 border_bot">
+                                    <div class="centerx blurx">
+                                        <h1 class="header_h1">7</h1>
+                                        <h6 class="x">ANSWERED QUESTIONS</h6>
+                                    </div>
+                                </div></div>
+                                <div class="row">
+                                <div class="col-md-12 whitex" style="padding-left:0!important;padding-right:0!important;border: 1px solid #dee1e2; border-top: 0!important;">
+									<table class="table table-hover">
+    									<tbody>
+        									<tr class="more1">
+            									<td style="border-top:0!important;    padding-top: 1.5em;padding-left: 1.5em;"><i class="fa fa-comment-o icon_ask" ></i>12</td>
+            									<td style="border-top:0!important;" class="td_info"><p>How to make good logo?</p></td>
+        									</tr>
+        									<tr class="more1">
+            									<td  style="padding-top: 1.5em;padding-left: 1.5em;"><i class="fa fa-comment-o icon_ask"></i> 3</td>
+            									<td class="td_info"><p>What are the best mobile apps</p></td>
+        									</tr>
+        									<tr class="more1">
+        									    <td style="padding-top: 1.5em;padding-left: 1.5em;"><i class="fa fa-comment-o icon_ask"></i> 67</td>
+        									    <td class="td_info"><p>What's the difference between Ui and</p></td>
+        									</tr>
+        									<tr class="more1">
+        									    <td style="padding-top: 1.5em;padding-left: 1.5em;"><i class="fa fa-comment-o icon_ask"></i> 0</td>
+        									    <td class="td_info"><p>What logos include hidden messages</p></td>
+        									</tr>
+        									<tr >
+            									<td colspan="2">
+                									<div class="more_button">
+                    									<p>Show more <i class="fa fa-angle-double-down"></i></p>
+                									</div>
+            									</td>
+        									</tr>
+    									</tbody>
+  									</table>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                            <div class="col-md-3 col-sm-3 col-xs-10 other_ways" id="Info3">
+                                <div class="row">
+                                <div class="row">
+                                    <div class="col-md-6 col-sm-6 col-xs-6 whitex border_todo_head">
+                                        <div class="centerx greenx">
+                                            <h1 class="header_h1">19</h1>
+                                            <h6 class="x">FOLLOWING EXAMS</h6>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-sm-6 col-xs-6 border_bot">
+                                        <div class="centerx blurx">
+                                            <h1 class="header_h1">88</h1>
+                                            <h6 class="x">DONE EXAMS</h6>
+                                        </div>
+                                    </div></div>
+                                    <div class="row">
+                                    <div class="col-md-12 whitex " style="padding-left:0!important;padding-right:0!important;border: 1px solid #dee1e2; border-top: 0!important;">
+                                        <table class="table table-hover">
+    										<tbody>
+        										<tr class="more2">
+            										<td style="border-top:0!important;"> 
+            											<div style="width: 50px;">
+            												<div class="progress1 vertical1">
+                                            					<div class="progress-bar " role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 10%;">
+                                            					</div>
+                                            					<p style="transform: rotate(90deg);margin-left: 1em; font-size:12px!important;color:#1b1c1d">10%</p>
+                                        					</div>
+                                        				</div>
+                                        			</td>
+            										<td style="border-top:0!important;" ><p class="td_info">Junlor web designer</p></td>
+        										</tr>
+        										<tr class="more2">
+            										<td>
+            											<div style="width: 50px;">
+            												<div class="progress1 vertical1">
+                                            					<div class="progress-bar " role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                                                                <p style="transform: rotate(90deg);margin-left: 1em; font-size:12px!important;color:#1b1c1d">60%</p>
+                                            					</div>
+                                        					</div>
+                                        				</div>
+                                        			</td>
+            										<td ><p class="td_info">Which is the best way to pass the..</p></td>
+        										</tr>
+        										<tr class="more2">
+            										<td>
+            											<div style="width: 50px;">
+            												<div class="progress1 vertical1">
+                                            					<div class="progress-bar " role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 89%;">
+                                                                <p style="transform: rotate(90deg);margin-left: 1em; font-size:12px!important;color:#1b1c1d">89%</p>
+                                            					</div>
+                                        					</div>
+                                        				</div>
+                                        			</td>
+            										<td ><p class="td_info">What are great examples of viral UX</p></td>
+        										</tr>
+        										<tr class="more2">
+            										<td>
+            											<div style="width: 50px;">
+            												<div class="progress1 vertical1">
+                                            					<div class="progress-bar " role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 34%;">
+                                                                <p style="transform: rotate(90deg);margin-left: 1em; font-size:12px!important;color:#1b1c1d">34%</p>
+                                            					</div>
+                                        					</div>
+                                        				</div>
+                                        			</td>
+            										<td ><p class="td_info">Why is consistency important in design?</p></td>
+        										</tr>
+        										<tr >
+            										<td colspan="2">
+                										<div class="more_button">
+                										    <p >Show more <i class="fa fa-angle-double-down"></i></p>
+                										</div>
+            										</td>
+        										</tr>
+    										</tbody>
+  										</table>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                <div class="col-md-12 cards_top">
+                <div class="row">
+                    <div class="whitex border-info">
+                        <div>
+                          		<div class="row">
+                              		<div class="col-md-4 col-sm-12 col-xs-12 msc" >
+                                  		<div class="heig">
+                                    		<div class="row" style="margin-left: 20px;">
+                                     			<h5 class="count_h5">Experience gained</h3>
+                                    			<div class="col-md-2 col-sm-2 col-xs-2" style="margin-right: 1.5em;">
+                                        			<div class="progress vertical">
+                                            			<div class="progress-bar " role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 70%;">
+                                            			</div>
+                                        			</div>
+                                        			<p class="progress_p">COURSE </p>
+                                    			</div>
+                                    			<div class="col-md-2 col-sm-2 col-xs-2" style="margin-right: 1.5em;">
+                                        			<div class="progress vertical">
+                                            			<div class="progress-bar " role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 40%;">
+                                            			</div>  
+                                        			</div>
+                                        			<p class="progress_p">QUESTION</p>
+                                    			</div>
+                                    			<div class="col-md-2 col-sm-2 col-xs-2" style="margin-right: 1.5em;">
+                                        			<div class="progress vertical">
+                                            			<div class="progress-bar " role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 50%;">
+                                            			</div>  
+                                        			</div>
+                                        			<p class="progress_p">EXAM</p>
+                                    			</div>
+                                    			<div class="col-md-3" style="    margin-left: -1em;" >
+                                        			<h1 class="count">+142</h1>
+                                        			<p class="count_p">LAST MONTH</p>
+                                    			</div>
+                                			</div>
+                            			</div>
+                        			<div style="max-height: 100px;" >
+        								<div class="xdivline" id="chartdiv" style="width: 100%; height: 210px; background-color: rgba(255, 255, 255, 0.03);    position: relative;top: -1em;" ></div>
+									</div>
+								</div>
+                        		<div class="col-md-8 col-sm-12 col-xs-12 leftx" >
+                            		<div class="list_header">
+                            		    <h5 class="friend_h5">FRIEND ACTIVITY</h5>
+                            		</div>
+                            	<div>
+									<table class="table table-hover">
+    									<tbody>
+    									    <tr class="more1">
+    									        <td><img alt="image" class="img-circle" src="img/girl-03.jpg" width="34" height="34"></td>
+    									        <td class="td_info"><a>SHAWN PETERSON</a> Finised the course: <a class="text">Basic for UX Designer</a></td>
+    									        <td class="td_clock td_info"><i class="fa fa-clock-o"></i> 9:30 PM</td>
+    									    </tr>
+    									    <tr class="more1">
+    									        <td><img alt="image" class="img-circle" src="img/girl-03.jpg" width="34" height="34"></td>
+    									        <td class="td_info"><a>JOE RAMOS</a> Finished the exam: <a class="text"> Junior web Designer</a></td>
+    									        <td class="td_clock td_info"><i class="fa fa-clock-o"></i> 9:30 PM</td>
+    									    </tr>
+    									    <tr class="more1">
+    									        <td><img alt="image" class="img-circle" src="img/girl-03.jpg" width="34" height="34"></td>
+    									        <td class="td_info"><a>JOE RAMOS</a> Finished the exam: <a class="text">Junior web Designer</a></td>
+    									        <td class="td_clock td_info"><i class="fa fa-clock-o"></i> 9:30 PM</td>
+    									    </tr>
+    									    <tr class="more1">
+    									        <td><img alt="image" class="img-circle" src="img/girl-03.jpg" width="34" height="34"></td>
+    									        <td class="td_info"><a>JOE RAMOS</a> Finished the exam: <a class="text">Junior web Designer</a></td>
+    									        <td class="td_clock td_info"><i class="fa fa-clock-o"></i> 9:30 PM</td>
+    									    </tr>
+    									    <tr >
+    									        <td colspan="3">
+    									            <div class="more_button">
+    									                <p>Show more <i class="fa fa-angle-double-down"></i></p>
+    									            </div>
+    									        </td>
+    									    </tr>
+    									</tbody>
+  									</table>
+                            	</div>      
+                        	</div>
+                        </div>
+					</div>
+                </div>
+            </div>
+       	</div>		
+  	</div>
+	<script type="text/javascript" src="js/main.js"></script>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.js"></script>
+	</body>
+</html>
